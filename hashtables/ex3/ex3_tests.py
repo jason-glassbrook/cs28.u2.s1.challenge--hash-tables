@@ -1,6 +1,6 @@
 import unittest
 
-from ex3 import intersection
+from .ex3 import intersection
 
 
 class TestEx2(unittest.TestCase):

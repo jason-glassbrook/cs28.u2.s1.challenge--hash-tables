@@ -1,6 +1,6 @@
 import unittest
 
-from ex4 import has_negatives
+from .ex4 import has_negatives
 
 
 class TestEx4(unittest.TestCase):
