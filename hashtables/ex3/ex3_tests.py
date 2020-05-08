@@ -7,23 +7,23 @@ class TestEx2(unittest.TestCase):
 
     def test_small(self):
         result = intersection([[1, 2, 3], [1, 4, 5], [1, 6, 7]])
-        self.assertTrue(result == [1])
+        self.assertEqual([1], result)
 
         result = intersection([
             [1],
             [1],
         ])
-        self.assertTrue(result == [1])
+        self.assertEqual([1], result)
 
         result = intersection([
             [1, 2],
             [1],
         ])
-        self.assertTrue(result == [1])
+        self.assertEqual([1], result)
 
         result = intersection([[1, 2, 3], [1, 4, 5, 3], [1, 6, 7, 3]])
         result.sort()
-        self.assertTrue(result == [1, 3])
+        self.assertEqual([1, 3], result)
 
     def test_large(self):
         arrays = [
@@ -41,7 +41,7 @@ class TestEx2(unittest.TestCase):
 
         result = intersection(arrays)
         result.sort()
-        self.assertTrue(result == [1, 2, 3])
+        self.assertEqual([1, 2, 3], result)
 
 
 if __name__ == "__main__":
