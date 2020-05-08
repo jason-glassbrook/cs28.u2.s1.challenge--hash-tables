@@ -6,13 +6,13 @@ from .ex2 import Ticket, reconstruct_trip
 class TestEx2(unittest.TestCase):
 
     def test_short_case(self):
-        ticket_1 = Ticket("NONE", "PDX")
+        ticket_1 = Ticket(None, "PDX")
         ticket_2 = Ticket("PDX", "DCA")
-        ticket_3 = Ticket("DCA", "NONE")
+        ticket_3 = Ticket("DCA", None)
 
         tickets = [ticket_1, ticket_2, ticket_3]
 
-        expected = ["PDX", "DCA", "NONE"]
+        expected = ["PDX", "DCA", None]
         result = reconstruct_trip(tickets, 3)
 
         self.assertTrue(expected == result)
@@ -22,10 +22,10 @@ class TestEx2(unittest.TestCase):
         ticket_2 = Ticket("XNA", "SAP")
         ticket_3 = Ticket("SFO", "BHM")
         ticket_4 = Ticket("FLG", "XNA")
-        ticket_5 = Ticket("NONE", "LAX")
+        ticket_5 = Ticket(None, "LAX")
         ticket_6 = Ticket("LAX", "SFO")
         ticket_7 = Ticket("SAP", "SLC")
-        ticket_8 = Ticket("ORD", "NONE")
+        ticket_8 = Ticket("ORD", None)
         ticket_9 = Ticket("SLC", "PIT")
         ticket_10 = Ticket("BHM", "FLG")
 
@@ -52,7 +52,7 @@ class TestEx2(unittest.TestCase):
             "SLC",
             "PIT",
             "ORD",
-            "NONE",
+            None,
         ]
         result = reconstruct_trip(tickets, 10)
 
