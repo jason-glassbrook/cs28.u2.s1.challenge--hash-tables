@@ -7,7 +7,7 @@ def get_indices_of_item_weights(weights, length, limit):
     index_tuple = (None, None)
 
     # iterate through dict to find limit:
-    for weight_1 in weight_to_index_dict.keys():
+    for weight_1 in weight_to_index_dict:
 
         weight_2 = limit - weight_1
 
