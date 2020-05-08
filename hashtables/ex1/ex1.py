@@ -20,4 +20,7 @@ def get_indices_of_item_weights(weights, length, limit):
 
             break
 
+    if None in index_tuple:
+        index_tuple = None
+
     return index_tuple
