@@ -1,9 +1,11 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
 
-    return result
+    negatives = {(-n): None for n in a if n < 0}
+    positives = {(+n): None for n in a if n > 0}
+
+    matches = [n for n in positives if n in negatives]
+
+    return matches
 
 
 if __name__ == "__main__":
