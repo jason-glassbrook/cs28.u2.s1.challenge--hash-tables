@@ -29,5 +29,5 @@ class TestEx1(unittest.TestCase):
         self.assertTrue(answer_4[1] == 2)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -29,15 +29,35 @@ class TestEx2(unittest.TestCase):
         ticket_9 = Ticket("SLC", "PIT")
         ticket_10 = Ticket("BHM", "FLG")
 
-        tickets = [ticket_1, ticket_2, ticket_3, ticket_4, ticket_5,
-                   ticket_6, ticket_7, ticket_8, ticket_9, ticket_10]
+        tickets = [
+            ticket_1,
+            ticket_2,
+            ticket_3,
+            ticket_4,
+            ticket_5,
+            ticket_6,
+            ticket_7,
+            ticket_8,
+            ticket_9,
+            ticket_10,
+        ]
 
-        expected = ["LAX", "SFO", "BHM", "FLG", "XNA", "SAP",
-                    "SLC", "PIT", "ORD", "NONE"]
+        expected = [
+            "LAX",
+            "SFO",
+            "BHM",
+            "FLG",
+            "XNA",
+            "SAP",
+            "SLC",
+            "PIT",
+            "ORD",
+            "NONE",
+        ]
         result = reconstruct_trip(tickets, 10)
 
         self.assertTrue(expected == result)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
