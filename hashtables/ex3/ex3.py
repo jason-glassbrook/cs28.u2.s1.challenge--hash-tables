@@ -1,9 +1,21 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
 
-    return result
+    # set default output
+    repeats_dict = {}
+
+    # iteratively construct a dict, inserting repeats to `repeats_dict`
+    items_dict = {}
+    for array in arrays:
+        for item in array:
+            if item in items_dict.keys():
+                if item in repeats_dict.keys():
+                    repeats_dict[item] += 1
+                else:
+                    repeats_dict[item] = 1
+            else:
+                items_dict[item] = None
+
+    return list(repeats_dict.keys())
 
 
 if __name__ == "__main__":
