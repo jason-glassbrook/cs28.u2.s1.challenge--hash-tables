@@ -7,9 +7,6 @@ class Ticket:
 
 
 def reconstruct_trip(tickets, length):
-    """
-    YOUR CODE HERE
-    """
 
     # dict of sources to destinations:
     source_to_destination_dict = {ticket.source: ticket.destination for ticket in tickets}
