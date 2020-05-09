@@ -1,21 +1,21 @@
 def intersection(arrays):
 
-    # set default output
-    repeats_dict = {}
+    # set default `repeats_map`
+    repeats_map = {}
 
-    # iteratively construct a dict, inserting repeats to `repeats_dict`
-    items_dict = {}
+    # iteratively construct a map, inserting repeats to `repeats_map`
+    items_map = {}
     for array in arrays:
         for item in array:
-            if item in items_dict:
-                if item in repeats_dict:
-                    repeats_dict[item] += 1
+            if item in items_map:
+                if item in repeats_map:
+                    repeats_map[item] += 1
                 else:
-                    repeats_dict[item] = 1
+                    repeats_map[item] = 1
             else:
-                items_dict[item] = None
+                items_map[item] = None
 
-    return list(repeats_dict)
+    return list(repeats_map)
 
 
 if __name__ == "__main__":

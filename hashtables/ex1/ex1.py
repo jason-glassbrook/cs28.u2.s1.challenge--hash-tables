@@ -1,26 +1,27 @@
 def get_indices_of_item_weights(weights, length, limit):
 
-    # dict of weights to indices:
-    weight_to_index_dict = {weight: index for (index, weight) in enumerate(weights)}
+    # map weights to indices:
+    weight_to_index_map = {weight: index for (index, weight) in enumerate(weights)}
 
-    # set default output
-    index_tuple = (None, None)
+    # set default `matches`
+    matches = (None, None)
 
-    # iterate through dict to find limit:
-    for weight_1 in weight_to_index_dict:
+    # find indices of weights which sum to limit:
+    for weight_1 in weight_to_index_map:
 
         weight_2 = limit - weight_1
 
-        if weight_2 in weight_to_index_dict:
+        if weight_2 in weight_to_index_map:
 
-            index_tuple = (
-                weight_to_index_dict[weight_1],
-                weight_to_index_dict[weight_2],
+            matches = (
+                weight_to_index_map[weight_1],
+                weight_to_index_map[weight_2],
             )
 
             break
 
-    if None in index_tuple:
-        index_tuple = None
+    # override `matches` if none found
+    if None in matches:
+        matches = None
 
-    return index_tuple
+    return matches

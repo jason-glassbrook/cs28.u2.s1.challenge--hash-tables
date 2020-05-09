@@ -5,18 +5,18 @@ import os
 def finder(paths, queries):
 
     # map bases to paths
-    bases_to_paths = DefaultDict(list)
+    base_to_paths_map = DefaultDict(list)
     for p in paths:
         b = os.path.basename(p)
-        bases_to_paths[b].append(p)
+        base_to_paths_map[b].append(p)
 
-    # find query paths
-    query_paths = []
+    # find paths matching queries
+    matches = []
     for q in queries:
-        if q in bases_to_paths:
-            query_paths.extend(bases_to_paths[q])
+        if q in base_to_paths_map:
+            matches.extend(base_to_paths_map[q])
 
-    return query_paths
+    return matches
 
 
 if __name__ == "__main__":

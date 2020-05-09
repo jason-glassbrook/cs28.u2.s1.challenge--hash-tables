@@ -1,9 +1,9 @@
 def has_negatives(a):
 
-    negatives = {(-n): None for n in a if n < 0}
-    positives = {(+n): None for n in a if n > 0}
+    negatives_map = {(-n): None for n in a if n < 0}
+    positives_map = {(+n): None for n in a if n > 0}
 
-    matches = [n for n in positives if n in negatives]
+    matches = [n for n in positives_map if n in negatives_map]
 
     return matches
 

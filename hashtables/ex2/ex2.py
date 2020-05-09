@@ -8,18 +8,18 @@ class Ticket:
 
 def reconstruct_trip(tickets, length):
 
-    # dict of sources to destinations:
-    source_to_destination_dict = {ticket.source: ticket.destination for ticket in tickets}
+    # map sources to destinations:
+    source_to_destination_map = {ticket.source: ticket.destination for ticket in tickets}
 
-    # set default output
+    # set default `route`
     route = []
 
     # first ticket is...
-    if None in source_to_destination_dict:
-        route.append(source_to_destination_dict[None])
+    if None in source_to_destination_map:
+        route.append(source_to_destination_map[None])
 
     # iterate through remaining tickets...
     while route[-1] is not None:
-        route.append(source_to_destination_dict[route[-1]])
+        route.append(source_to_destination_map[route[-1]])
 
     return route
