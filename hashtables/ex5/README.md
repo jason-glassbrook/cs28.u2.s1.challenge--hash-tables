@@ -10,20 +10,24 @@ paths = [
     "/usr/local/share/foo.txt",
     "/usr/bin/ls",
     "/home/davidlightman/foo.txt",
-    "/bin/su"
+    "/bin/su",
 ]
 
 queries = [
     "ls",
     "foo.txt",
-    "nosuchfile.txt"
+    "nosuchfile.txt",
 ]
 ```
 
 Example return value:
 
 ```python
-[ "/usr/local/share/foo.txt", "/usr/bin/ls", "/home/davidlightman/foo.txt" ]
+[
+    "/usr/local/share/foo.txt",
+    "/usr/bin/ls",
+    "/home/davidlightman/foo.txt",
+]
 ```
 
 because that's where the `foo.txt` and `ls` files are.
