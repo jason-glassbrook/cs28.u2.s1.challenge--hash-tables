@@ -4,7 +4,7 @@ import os
 
 def finder(paths, queries):
 
-    # map bases to paths
+    # map bases to paths, allowing duplicates
     base_to_paths_map = DefaultDict(list)
     for p in paths:
         b = os.path.basename(p)
