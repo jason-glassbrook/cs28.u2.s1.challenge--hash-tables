@@ -20,7 +20,7 @@ in all lists.
 
 From the above input, the return value will be:
 
-```
+```python
 [1, 2]
 ```
 
@@ -30,5 +30,5 @@ Because those are the numbers that exist in all the lists.
 
 Limits:
 
-* There can be up to 10 lists in the list of lists.
-* The lists can contain up to roughly 1,000,000 elements each.
+*   There can be up to 10 lists in the list of lists.
+*   The lists can contain up to roughly 1,000,000 elements each.

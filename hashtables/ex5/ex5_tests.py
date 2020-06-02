@@ -1,29 +1,33 @@
 import unittest
 
-from ex5 import finder
+from .ex5 import finder
 
 
 class TestEx2(unittest.TestCase):
 
     def test_small(self):
         files = [
-            '/bin/foo',
-            '/bin/bar',
-            '/usr/bin/baz'
+            "/bin/foo",
+            "/bin/bar",
+            "/usr/bin/baz",
         ]
         queries = [
             "foo",
             "qux",
-            "baz"
+            "baz",
         ]
         result = finder(files, queries)
-        self.assertTrue(result == ['/bin/foo', '/usr/bin/baz'])
+        self.assertEqual(
+            [
+                "/bin/foo",
+                "/usr/bin/baz",
+            ],
+            result,
+        )
 
-        queries = [
-            "qux"
-        ]
+        queries = ["qux"]
         result = finder(files, queries)
-        self.assertTrue(result == [])
+        self.assertEqual([], result)
 
     def test_large(self):
         files = []
@@ -43,16 +47,24 @@ class TestEx2(unittest.TestCase):
             "file3490",
             "file256",
             "file999999",
-            "file8192"
+            "file8192",
         ]
 
         result = finder(files, queries)
         result.sort()
 
-        self.assertTrue(result == ['/dir256/dirb256/file256',
-            '/dir256/file256', '/dir3490/dirb3490/file3490',
-            '/dir3490/file3490', '/dir8192/dirb8192/file8192',
-            '/dir8192/file8192'])
+        self.assertEqual(
+            [
+                "/dir256/dirb256/file256",
+                "/dir256/file256",
+                "/dir3490/dirb3490/file3490",
+                "/dir3490/file3490",
+                "/dir8192/dirb8192/file8192",
+                "/dir8192/file8192",
+            ],
+            result,
+        )
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

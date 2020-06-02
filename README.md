@@ -40,7 +40,7 @@ through algorithm problems that are amenable to being solved efficiently
 using a hash table.
 
 Navigate into each exercise's directory, read the instructions for the
-exercise laid out in the README, implement your solution in the .py
+exercise laid out in the README, implement your solution in the `.py`
 skeleton file, then make sure your code passes the tests by running the
 test script with make tests.
 
@@ -55,7 +55,5 @@ used. (Though you can make a `dict` behave like a set, if you wish.)*
 
 ## Minimum Viable Product
 
-* [Hash
-  Tables](https://github.com/LambdaSchool/Sprint-Challenge--Hash/tree/master/hashtables):
-  solve any 3 of the 5 problems. Solve more for more points.
-
+*   [Hash Tables](https://github.com/LambdaSchool/Sprint-Challenge--Hash/tree/master/hashtables):
+    solve any 3 of the 5 problems. Solve more for more points.
